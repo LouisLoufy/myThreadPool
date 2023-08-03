@@ -14,9 +14,10 @@ int main() {
   std::cout << "thread id is: " << thread1.get_id()
             << ", support num is: " << thread1.hardware_concurrency()
             << std::endl;
-  thread1
-      .join();  // 等待线程完成再去执行接下来的代码，主线程需要等待子线程结束之后才可以结束
-  // thread1.detach(); // 让线程在后台运行，并且主线程不会等待子线程结束后再结束
+  /* 等待线程完成再去执行接下来的代码，主线程需要等待子线程结束之后才可以结束 */
+  thread1.join();
+  /* 让线程在后台运行，并且主线程不会等待子线程结束后再结束 */ 
+  // thread1.detach();
 
   // while (true) {
   //     std::cout << "main thread" << std::endl;
