@@ -1,4 +1,4 @@
-/* 主线程获取子线程的返回值 */
+/* 子线程获取主线程的返回值 */
 #include <future>
 #include <iostream>
 #include <thread>
